@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:url('https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&w=1000&q=80');
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow:hidden;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.name{
+    font-family: orbitron;
+    text-align: center;
+    color: #eee;
+    /* background: linear-gradient(rgb(255, 0, 234),rgb(0, 76, 255)); */
+    background: linear-gradient(90deg,#626cfc,#06a2be);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container{
+    padding: 20px 60px;
+    color:#fff;
+}
+
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: rgba(24,24,27, 0.6);
+    padding:20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.date-container{
+    font-weight: 100;
+}
+.date-container .time{
+    font-size: 70px;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.input-box{
+border: 1px solid #eee;
+border-radius: 10px;
+padding:15px;
+padding-right: 40px;
+border-radius: 10px;
+background: rgba(0,0,0,0.2);
+color: #eee;
+font-size: 20px;
+text-transform: capitalize;
+}
+
+.search-box button{
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  border-radius: 50%;
+  color: #eee;
+  border: 1px solid #eee;
+  background: rgba(0,0,0,0.2);
+}
+
+.search-box button:hover{
+  color: rgb(77, 142, 165);
+  background-color: #444343;
+}
+
+.place-container{
+    text-align: end;
+}
+
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+.place-container .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1{
+    font-size: 20px;
+    color: #1e6378;
+    margin-block-end: 15px;
+}
+.location-not-found img{
+    width:20%;
+}
+
+.weather-body{
+    display: none;
+  }
+  #descrp-img{
+    display: flex;
+    justify-content: center;
+  }
+
+  .descrp-img{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap:0px;
+    
+  }
+
+  .description{
+    color: #1e6378;
+    font-weight: 1000;
+    font-size: 20px;
+    text-align:end;
+    text-transform: capitalize;
+  }
+
+  .weather-img{
+    width: 250px;
+    height: 200px;
+  }
+
+.weather-details{
+    background: rgba(24,24,27,0.8);
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color:white;
+    font-size: 200;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.weather-details .weather-forecast{
+    display: flex;
+}
+
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+}
+
+#icon{
+    color: #6adcff;
+}
+
+@media only screen and  (max-width:730px){
+    
+    .container{
+        padding: 20px;
+    }
+    
+    .weather-details{
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+        font-size: 15px;
+    }
+
+    .date-container .time{
+        font-size: 50px;
+    }
+
+    .date-container #am-pm{
+        font-size: 20px;
+    }
+
+    .date-container .date{
+        font-size: 20px;
+    }
+
+    .place-container{
+        text-align: end;
+        margin-top: 15px;
+    }
+
+    .place-container .time-zone{
+        font-size: 20px;
+    }
+
+    .current-info{
+        padding: 12px;
+    }
+
+    .current-info .weather-details{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 1400px){
+    .weather-details{
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+}
